@@ -1,0 +1,7 @@
+[manager]
+prepend_keymap = [
+	{ on = ["<C-s>"], run = 'shell "$SHELL" --block --confirm', desc = "Open shell here" },
+	{ on = ["<C-g>"], run = 'shell "mv $(ripdrag -x -t ./*)	./" --confirm', desc = "Drag"},
+	{ on = ["y"], run = ["yank", ''' shell --confirm 'echo "$@" | wl-copy' '''], desc = "Copy"},
+	{ on = ["T"], run = 'plugin --sync max-preview', desc = "Maximize preview"},
+]
