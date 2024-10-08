@@ -1,0 +1,92 @@
+@import "mocha.css";
+
+* {
+  font-family: "Fira";
+  font-size: 13px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: #1d2021;
+}
+
+#tray,
+#window,
+#network,
+#backlight,
+#clock,
+#cpu,
+#memory,
+#pulseaudio,
+#custom-lock,
+#battery,
+#custom-power {
+  background-color: transparent;
+  margin: 7px 3px 0px 7px;
+  padding: 10px 5px 10px 5px;
+  border-radius: 1rem;
+  color: @text
+}
+
+#clock {
+  color: @text;
+}
+
+#battery {
+  color: @peach;
+}
+
+#battery.good {
+  color: @green
+}
+
+#battery.charging {
+  color: @blue;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#battery.warning.charging {
+  color: @peach;
+}
+
+#network {
+  color: @text;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#pulseaudio {
+  color: @text;
+}
+
+#pulseaudio.muted {
+  color: @red;
+}
+
+#microphone.muted {
+  color: @red;
+}
+
+#custom-power {
+  border-radius: 1rem;
+  color: @red;
+  margin-bottom: 1rem;
+}
+
+#tray {
+  border-radius: 1rem;
+}
+
+tooltip {
+  background: @base;
+  border: 2px solid @mauve;
+}
+
+tooltip label {
+  color: @text;
+}

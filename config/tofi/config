@@ -1,0 +1,13 @@
+# mocha
+text-color = #cdd6f4
+prompt-color = #f38ba8
+selection-color = #cba6f7
+background-color = #000000
+
+width = 45%
+height = 45%
+border-width = 0
+outline-width = 0
+num-results = 8
+font = monospace
+font-size = 20
