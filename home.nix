@@ -168,6 +168,11 @@
         variant = "macchiato";
       };
     };
+    dconf.settings = {
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+      };
+    };
     # iconTheme = {
     #   package = pkgs.gruvbox-plus-icons;
     #   name = "Gruvbox-Plus-Dark";
