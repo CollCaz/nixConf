@@ -161,8 +161,8 @@
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.gruvbox-gtk-theme;
-      name = "dark standard pink black Dark";
+      package = pkgs.catppuccin-gtk;
+      name = "Catppuccin-Macchiato-Compact-Pink-Dark";
     };
     # iconTheme = {
     #   package = pkgs.gruvbox-plus-icons;
