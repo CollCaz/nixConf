@@ -155,7 +155,7 @@
   };
 
   imports = [
-    #./modules/lf/lf.nix
+    ./homeManagerModules/gtkModule.nix
   ];
 
   services = {
@@ -164,17 +164,17 @@
     };
   };
 
-  gtk = {
-    enable = true;
-    theme = {
-      package = pkgs.gruvbox-gtk-theme;
-      name = "Gruvbox-Dark-BL";
-    };
-    iconTheme = {
-      package = pkgs.gruvbox-plus-icons;
-      name = "Gruvbox-Plus-Dark";
-    };
-  };
+  # gtk = {
+  #   enable = true;
+  #   theme = {
+  #     package = pkgs.gruvbox-gtk-theme;
+  #     name = "Gruvbox-Dark-BL";
+  #   };
+  #   iconTheme = {
+  #     package = pkgs.gruvbox-plus-icons;
+  #     name = "Gruvbox-Plus-Dark";
+  #   };
+  # };
 
   programs.mpv = {
     enable = true;
