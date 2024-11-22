@@ -161,11 +161,12 @@
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.catppuccin-gtk;
       name = "Catppuccin-Macchiato-Compact-Pink-Dark";
-      accents = [ "pink" ];
-      size = [ "standard" ];
-      variant = "macchiato";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "pink" ];
+        size = [ "standard" ];
+        variant = "macchiato";
+      };
     };
     # iconTheme = {
     #   package = pkgs.gruvbox-plus-icons;
