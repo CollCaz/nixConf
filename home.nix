@@ -158,30 +158,6 @@
     # ./homeManagerModules/gtkModule.nix
   ];
 
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Catppuccin-Macchiato-Compact-Pink-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "pink" ];
-        size = "standard";
-        variant = "macchiato";
-      };
-    };
-    # iconTheme = {
-    #   package = pkgs.gruvbox-plus-icons;
-    #   name = "Gruvbox-Plus-Dark";
-    # };
-  };
-  dconf = {
-    enable = true;
-    settings = {
-      "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
-      };
-    };
-  };
-
   services = {
     dunst = {
       enable = true;

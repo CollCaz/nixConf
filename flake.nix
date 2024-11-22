@@ -3,13 +3,14 @@
   
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    stylix.url = "github:danth/stylix";
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, home-manager, ...}:
+  outputs = { nixpkgs, home-manager, ...}@inputs:
     let 
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -17,8 +18,11 @@
       nixosConfigurations = {
         beatrix = nixpkgs.lib.nixosSystem {
           inherit system;
-          # modules = [./configuration.nix];
-          modules = [./hosts/beatrix/configuration.nix];
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/beatrix/configuration.nix
+            inputs.stylix.nixosModules.stylix
+          ];
         };
       };
 

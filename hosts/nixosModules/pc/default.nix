@@ -8,6 +8,7 @@
     ./powerManagementModule.nix
     ./printingModule.nix
     ./soundModule.nix
+    ./stylix.nix
   ];
 
   fontsModule.enable =
