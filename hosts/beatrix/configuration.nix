@@ -11,6 +11,9 @@
 	networking.hostName = "beatrix";
 	time.timeZone = "Africa/Tripoli";
 
+	batteryModule.enable = true;
+	powerManagementModule.enable = true;
+
 	networkModule = {
 		enable = true;
 
