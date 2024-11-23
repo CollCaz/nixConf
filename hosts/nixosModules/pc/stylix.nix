@@ -11,9 +11,9 @@
         package = pkgs.fira-go;
         name = "FiraGo";
       };
-      monoSpace = {
-        package = pkgs.fira-code-nerdfont;
-        name = "Fira Mono Code NerdFont";
+      monospace = {
+        package = pkgs.fira-code;
+        name = "FiraCode_Mono";
       };
     };
   };
