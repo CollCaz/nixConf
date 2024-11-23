@@ -3,6 +3,7 @@
 {
 	imports = 
 		[
+			./hardware-configuration.nix
 			../core.nix
 			../nixosModules/pc/default.nix
 			../nixosModules/networkModule.nix
