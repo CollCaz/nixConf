@@ -18,7 +18,7 @@
   };
 
   imports = [
-    ./homeManagerModules/yaziModule.nix
+    ./homeManagerModules/yazi/yaziModule.nix
   ];
 
   xdg = {
