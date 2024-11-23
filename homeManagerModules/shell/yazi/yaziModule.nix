@@ -1,16 +1,16 @@
 { pkgs, lib, config, ... }:
 
 {
-  # options = {
-  #   yaziModule = {
-  #     enable = 
-  #       lib.mkEnableOption "enables yazi";
-  #
-  #     fishIntegration =
-  #       lib.mkEnableOption "enables fish integration";
-  #   };
-  # };
-  # config = lib.mkIf config.yaziModule.enable {
+  options = {
+    yaziModule = {
+      enable = 
+        lib.mkEnableOption "enables yazi";
+
+      fishIntegration =
+        lib.mkEnableOption "enables fish integration";
+    };
+  };
+  config = lib.mkIf config.yaziModule.enable {
     xdg = {
       enable = true;
       mime.enable = true;
@@ -28,6 +28,7 @@
     home = {
       packages = with pkgs; [
         yazi
+        ripdrag
       ];
 
       file = {
@@ -35,7 +36,7 @@
         ".config/yazi".source = ./yaziConfig;
       };
     };
-    programs.fish = {
+    programs.fish = lib.mkIf config.yaziModule.fishIntegration {
       enable = true;
 
       functions = {
@@ -51,5 +52,5 @@
         };
       };
     };
-  # };
+  };
 }

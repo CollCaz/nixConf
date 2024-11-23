@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+  # Let Home Manager install and manage itself.
+  programs.home-manager = {
+    enable = true;
+  };
+
   nixpkgs = {
     config = {
       allowUnfree = true;
@@ -18,7 +23,8 @@
   };
 
   imports = [
-    ./homeManagerModules/yazi/yaziModule.nix
+    ./homeManagerModules/shell/default.nix
+    ./homeManagerModules/git/gitModule.nix
   ];
 
   xdg = {
@@ -37,9 +43,9 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    pamixer
     pavucontrol
     vivid
-    pamixer
     firefox
     brave
     hyprpicker
@@ -51,13 +57,11 @@
     pistol
     tofi
     btop
-    fzf
     fd
     croc
     fira
     bat
     networkmanagerapplet
-    eza
     gh
     scc
     cowsay
@@ -71,7 +75,6 @@
     lazygit
     ripgrep
     telegram-desktop
-    ripdrag
     jetbrains.pycharm-community-bin
     qbittorrent
     gnumake
@@ -91,13 +94,6 @@
     nixd
     clang-tools_18
     basedpyright
-
-    # Fish
-    fishPlugins.fzf-fish
-    fishPlugins.done
-    #fishPlugins.z
-    fishPlugins.sponge
-    fishPlugins.colored-man-pages
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -143,15 +139,6 @@
   # };
   
 
-  home.sessionVariables = {
-    LS_COLORS = "$(vivid generate gruvbox-dark)";
-    EDITOR = "nvim";
-  };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager = {
-    enable = true;
-  };
 
 
   services = {
@@ -182,88 +169,10 @@
     enableFishIntegration = true;
   };
 
-  programs.fish = {
-    enable = true;
-
-    # shellInit = ''
-    # theme_gruvbox dark hard
-    # '';
-    
-    shellAliases = {
-      ls = "eza --icons always --color auto";
-      fzf = "fzf  --color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54";
-    };
-    shellAbbrs = {
-      d = "df -h";
-      hm = "home-manager";
-      lg = "lazygit";
-      hms = "home-manager switch --flake ~/.dotfiles/";
-      nv = "nvim";
-    };
-    functions = {
-      fish_user_key_bindings = {
-        body = ''
-        bind -M insert \cy accept-autosuggestion
-        '';
-      };
-      mount = {
-        body = ''
-          sudo mount $1 $2
-        '';
-      };
-    };
-    plugins = [
-      {
-        name = "gruvbox";
-        src = pkgs.fetchFromGitHub {
-          owner = "Jomik";
-          repo = "fish-gruvbox";
-          rev = "80a6f3a7b31beb6f087b0c56cbf3470204759d1c";
-          sha256 = "sha256-vL2/Nm9Z9cdaptx8sJqbX5AnRtfd68x4ZKWdQk5Cngo=";
-        };
-      }
-    ];
-    
-  };
-
   programs.direnv = {
     enable = true;
   };
 
-  
-  programs.bash = {
-    enable = true;
-    sessionVariables = {
-      LS_COLORS = "$(vivid generate gruvbox-dark)";
-      EDITOR = "nvim";
-    };
-    initExtra = ''
-       if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
-         then
-           shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
-           exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
-       fi
-    '';
-  };
-
-  programs.starship = {
-    enable = true;
-    enableFishIntegration = true;
-    settings = {
-      add_newline = true;
-    };
-  };
- 
-  programs.git = {
-    enable = true;
-    userName = "CollCaz";
-    userEmail = "62307305+CollCaz@users.noreply.github.com";
-    aliases = {
-      pu = "push";
-      co = "checkout";
-      cm = "commit";
-    };
-  };
   
   programs.btop = {
     enable = true;
@@ -276,9 +185,6 @@
     };
   };
 
-  programs.fzf = {
-    enable = true;
-  };
 
   programs.pistol = {
     enable = true;

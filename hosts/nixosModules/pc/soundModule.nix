@@ -1,6 +1,7 @@
-{ pkgs, lib, config, ... }:
+{ lib, config, ... }:
 
 {
+
   options = {
     soundModule.enable = 
       lib.mkEnableOption "enables sound module";
@@ -17,9 +18,5 @@
       pulse.enable = true;
     };
 
-    home.packages = with pkgs; [
-      pavucontrol
-      pamixer
-    ];
   };
 }
