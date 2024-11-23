@@ -13,7 +13,6 @@
   outputs = { nixpkgs, home-manager, ...}@inputs:
     let 
       system = "x86_64-linux";
-      # pkgs = nixpkgs.legacyPackages.${system};
     in {
       nixosConfigurations = {
         beatrix = nixpkgs.lib.nixosSystem {
@@ -30,14 +29,5 @@
           ];
         };
       };
-
-      # homeConfigurations = {
-      #   coll = home-manager.lib.homeManagerConfiguration {
-      #     inherit pkgs;
-      #     modules = [ 
-      #       ./home.nix
-      #     ];
-      #   };
-      # };
     };
 }
