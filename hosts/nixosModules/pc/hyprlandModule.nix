@@ -12,7 +12,7 @@
     environment.systemPackages = with pkgs; [
       cliphist
       dunst
-      gnome.gnome-keyring
+      gnome-keyring
       hyprshot
       libnotify
       lxqt.lxqt-policykit
