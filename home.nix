@@ -189,9 +189,9 @@
   programs.fish = {
     enable = true;
 
-    shellInit = ''
-    theme_gruvbox dark hard
-    '';
+    # shellInit = ''
+    # theme_gruvbox dark hard
+    # '';
     
     shellAliases = {
       ls = "eza --icons always --color auto";
@@ -282,7 +282,7 @@
     enable = true;
     settings = {
       vim_keys = true;
-      color_theme = "gruvbox_dark";
+      # color_theme = "gruvbox_dark";
       update_ms = 100;
       proc_sorting = "memory";
       proc_tree = true;
