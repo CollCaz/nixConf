@@ -74,7 +74,7 @@
     yazi
     ripdrag
     jetbrains.pycharm-community-bin
-    qbittorrent-qt5
+    qbittorrent
     gnumake
     pkg-config
 
@@ -305,6 +305,6 @@
 
   programs.kitty = {
     enable = true;
-    theme = "Gruvbox Dark Hard";
+    #theme = "Gruvbox Dark Hard";
   };
 }
