@@ -17,6 +17,9 @@
 
   };
 
+  imports = [
+    ./homeManagerModules/yaziModule.nix
+  ];
 
   xdg = {
     enable = true;
@@ -26,9 +29,6 @@
       enable = true;
 
       defaultApplications = {
-      "inode/directory" = ["yazi.desktop"];
-      "image/png" = ["yazi.desktop"];
-      "image/jpg" = ["yazi.desktop"];
       "text/plain" = ["nvim"];
       };
     };
@@ -71,7 +71,6 @@
     lazygit
     ripgrep
     telegram-desktop
-    yazi
     ripdrag
     jetbrains.pycharm-community-bin
     qbittorrent
@@ -154,9 +153,6 @@
     enable = true;
   };
 
-  imports = [
-    # ./homeManagerModules/gtkModule.nix
-  ];
 
   services = {
     dunst = {
@@ -209,15 +205,6 @@
         body = ''
         bind -M insert \cy accept-autosuggestion
         '';
-      };
-      yy = {
-      body = ''
-        set tmp (mktemp -t "yazi-cwd.XXXXXX")
-        yazi $argv --cwd-file="$tmp"
-        if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-          cd -- "$cwd"
-        end
-        rm -f -- "$tmp"'';
       };
       mount = {
         body = ''
