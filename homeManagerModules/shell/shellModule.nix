@@ -36,6 +36,8 @@
 
     programs.fish = {
       enable = true;
+      shellInit = "fish_vi_key_bindings";
+      preferAbbrs = true;
 
       shellAliases = {
         ls = "eza --icons always --color auto";
@@ -47,6 +49,7 @@
         hms = "home-manager switch --flake ~/.dotfiles/";
       };
       functions = {
+        fish_greeting.body = '''';
         fish_user_key_bindings = {
           body = ''
           bind -M insert \cy accept-autosuggestion
