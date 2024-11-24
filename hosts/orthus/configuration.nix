@@ -6,17 +6,9 @@
 			./hardware-configuration.nix
 			../core.nix
 			../nixosModules/pc/default.nix
-			../nixosModules/networkModule.nix
+			../nixosModules/networking/default.nix
 		];
 
 	networking.hostName = "orthus";
 	time.timeZone = "Africa/Tripoli";
-
-	networkModule = {
-		enable = true;
-
-		firewall = {
-			enable = true;
-		};
-	};
 }

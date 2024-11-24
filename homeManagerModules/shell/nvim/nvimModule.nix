@@ -24,6 +24,9 @@ in
 				".config/nvim".recursive = true;
 				".config/nvim".source = config-repo;
 			};
+			sessionVariables = {
+				EDITOR = "nvim";
+			};
 		};
 	};
 }
