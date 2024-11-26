@@ -9,6 +9,7 @@
       };
       efi.canTouchEfiVariables = true;
     };
+    supportedFilesystems = [ "ntfs" ];
   };
 
   users = {
