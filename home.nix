@@ -73,7 +73,6 @@
     hyprpaper
     hyprshot
     smartmontools
-    bottles
     lazygit
     ripgrep
     telegram-desktop
