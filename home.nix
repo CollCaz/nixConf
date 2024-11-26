@@ -25,7 +25,6 @@
   imports = [
     ./homeManagerModules/shell/default.nix
     ./homeManagerModules/git/gitModule.nix
-    ./homeManagerModules/gaming/default.nix
   ];
 
   xdg = {

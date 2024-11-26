@@ -7,6 +7,7 @@
 			../core.nix
 			../nixosModules/pc/default.nix
 			../nixosModules/networking/default.nix
+			../nixosModules/gaming/default.nix
 		];
 
 	networking.hostName = "orthus";
