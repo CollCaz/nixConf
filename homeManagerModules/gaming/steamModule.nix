@@ -31,6 +31,5 @@
 				];
 			};
 		};
-		hardware.xone.enable = true;
 	};
 }
