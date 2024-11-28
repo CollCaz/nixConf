@@ -17,6 +17,7 @@
       fishPlugins.colored-man-pages
 
       eza
+      tokei
     ];
 
     programs.fzf = {
