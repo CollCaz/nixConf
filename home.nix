@@ -50,14 +50,12 @@
     vivid
     firefox
     brave
-    hyprpicker
-    waybar
     falkon
+    waybar
     kitty
     wezterm
     lf
     pistol
-    tofi
     btop
     fd
     croc
@@ -70,8 +68,6 @@
     sqlite
     luarocks
     gnirehtet
-    hyprpaper
-    hyprshot
     smartmontools
     lazygit
     ripgrep
