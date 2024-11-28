@@ -74,6 +74,9 @@
     telegram-desktop
     jetbrains.pycharm-community-bin
     qbittorrent
+    tofi
+    hyprpaper
+    hyprshot
     gnumake
     pkg-config
 
