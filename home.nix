@@ -59,6 +59,7 @@
     btop
     fd
     croc
+    webcord-vencord
     fira
     bat
     networkmanagerapplet
