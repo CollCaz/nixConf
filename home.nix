@@ -56,6 +56,8 @@
     wezterm
     lf
     pistol
+    protonvpn-gui
+    protonvpn-cli_2
     btop
     fd
     croc
