@@ -57,6 +57,7 @@
     lf
     pistol
     protonvpn-gui
+    gnome-keyring
     protonvpn-cli_2
     btop
     fd
