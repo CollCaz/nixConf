@@ -50,6 +50,7 @@
     vivid
     firefox
     brave
+    telegram-desktop
     falkon
     waybar
     kitty
