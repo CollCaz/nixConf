@@ -32,11 +32,11 @@
     optimise = {
       automatic = true;
     };
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 15d";
-    };
+    # gc = {
+    #   automatic = true;
+    #   dates = "weekly";
+    #   options = "--delete-older-than 15d";
+    # };
     # Flakes
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
