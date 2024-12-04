@@ -54,7 +54,6 @@
     waybar
     kitty
     wezterm
-    pistol
     protonvpn-gui
     gnome-keyring
     obs-studio
@@ -125,17 +124,6 @@
 
   programs.mpv = {
     enable = true;
-  };
-
-
-  programs.pistol = {
-    enable = true;
-    associations = [
-      { mime = "text/*"; command = "bat --style=plain  --color=always %pistol-filename%";}
-      { fpath = ".*.md$"; command = "bat --style=plain --paging=never --color=always %pistol-filename% | head -8"; }
-      { mime = "image/*"; command = "kitten icat %pistol-filename%";}
-    ];
-
   };
 
   programs.kitty = {
