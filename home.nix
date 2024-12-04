@@ -55,28 +55,20 @@
     waybar
     kitty
     wezterm
-    lf
     pistol
     protonvpn-gui
     gnome-keyring
     obs-studio
     protonvpn-cli_2
-    btop
-    fd
     croc
     webcord-vencord
     fira
-    bat
     networkmanagerapplet
-    gh
     scc
-    cowsay
     sqlite
     luarocks
     gnirehtet
     smartmontools
-    lazygit
-    ripgrep
     telegram-desktop
     jetbrains.pycharm-community-bin
     qbittorrent
@@ -127,68 +119,14 @@
     # '';
   };
 
-  # systemd.user.services = {
-  #   shadowsocks-proxy = {
-  #     enable = true;
-  #     Unit = {
-  #       Description = "Local Shadowsocks proxy";
-  #       After = "network.target";
-  #     };
-  #     Install = {
-  #       WantedBy = [ "default.target" ];
-  #     };
-  #     Service = {
-  #       ExecStart = "${pkgs.shadowsocks-rust}/bin/sslocal -c ${config.home.homeDirectory}/shadowsocks.json";
-  #       ExecStop = "${pkgs.toybox}/bin/killall sslocal";
-  #     };
-  #   };
-  # };
-  
-
-
-
   services = {
     dunst = {
       enable = true;
     };
   };
 
-  # gtk = {
-  #   enable = true;
-  #   theme = {
-  #     package = pkgs.gruvbox-gtk-theme;
-  #     name = "Gruvbox-Dark-BL";
-  #   };
-  #   iconTheme = {
-  #     package = pkgs.gruvbox-plus-icons;
-  #     name = "Gruvbox-Plus-Dark";
-  #   };
-  # };
-
   programs.mpv = {
     enable = true;
-  };
-
-
-  programs.zoxide = {
-    enable = true;
-    enableFishIntegration = true;
-  };
-
-  programs.direnv = {
-    enable = true;
-  };
-
-  
-  programs.btop = {
-    enable = true;
-    settings = {
-      vim_keys = true;
-      # color_theme = "gruvbox_dark";
-      update_ms = 100;
-      proc_sorting = "memory";
-      proc_tree = true;
-    };
   };
 
 

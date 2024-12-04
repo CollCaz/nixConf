@@ -18,6 +18,13 @@
 
       eza
       tokei
+      killall
+      fd
+      bat
+      ripgrep
+      cowsay
+      lazygit
+      gh
     ];
 
     programs.fzf = {
@@ -73,5 +80,24 @@
         add_newline = true;
       };
     };
+
+  programs.zoxide = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+
+  programs.direnv = {
+    enable = true;
+  };
+  programs.btop = {
+    enable = true;
+    settings = {
+      vim_keys = true;
+      # color_theme = "gruvbox_dark";
+      update_ms = 100;
+      proc_sorting = "memory";
+      proc_tree = true;
+    };
+  };
   };
 }
