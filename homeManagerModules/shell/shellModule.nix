@@ -81,23 +81,23 @@
       };
     };
 
-  programs.zoxide = {
-    enable = true;
-    enableFishIntegration = true;
-  };
-
-  programs.direnv = {
-    enable = true;
-  };
-  programs.btop = {
-    enable = true;
-    settings = {
-      vim_keys = true;
-      # color_theme = "gruvbox_dark";
-      update_ms = 100;
-      proc_sorting = "memory";
-      proc_tree = true;
+    programs.zoxide = {
+      enable = true;
+      enableFishIntegration = true;
     };
-  };
+
+    programs.direnv = {
+      enable = true;
+    };
+    programs.btop = {
+      enable = true;
+      settings = {
+        vim_keys = true;
+        # color_theme = "gruvbox_dark";
+        update_ms = 100;
+        proc_sorting = "memory";
+        proc_tree = true;
+      };
+    };
   };
 }
