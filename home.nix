@@ -51,7 +51,6 @@
     firefox
     brave
     telegram-desktop
-    falkon
     waybar
     kitty
     wezterm
@@ -70,7 +69,6 @@
     gnirehtet
     smartmontools
     telegram-desktop
-    jetbrains.pycharm-community-bin
     qbittorrent
     tofi
     hyprpaper
