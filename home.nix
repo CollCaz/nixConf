@@ -59,6 +59,7 @@
     pistol
     protonvpn-gui
     gnome-keyring
+    obs-studio
     protonvpn-cli_2
     btop
     fd
