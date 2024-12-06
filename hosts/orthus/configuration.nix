@@ -1,20 +1,20 @@
 { ... }:
 
 {
-	imports = 
-		[
-			./hardware-configuration.nix
-			../core.nix
-			../nixosModules/pc/default.nix
-			../nixosModules/networking/default.nix
-			../nixosModules/gaming/default.nix
-			../nixosModules/nvidia/default.nix
+  imports =
+    [
+      ./hardware-configuration.nix
+      ../core.nix
+      ../nixosModules/pc/default.nix
+      ../nixosModules/networking/default.nix
+      ../nixosModules/gaming/default.nix
+      ../nixosModules/nvidia/default.nix
 
-			./devices.nix
-		];
+      ./devices.nix
+    ];
 
-	networking.hostName = "orthus";
-	time.timeZone = "Africa/Tripoli";
+  networking.hostName = "orthus";
+  time.timeZone = "Africa/Tripoli";
 
-	nvidiaModule.enable = true;
+  nvidiaModule.enable = true;
 }

@@ -3,7 +3,7 @@
 {
 
   options = {
-    soundModule.enable = 
+    soundModule.enable =
       lib.mkEnableOption "enables sound module";
 
     soundModule.gui =

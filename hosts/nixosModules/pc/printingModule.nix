@@ -2,7 +2,7 @@
 
 {
   options = {
-    printingModule.enable = 
+    printingModule.enable =
       lib.mkEnableOption "enables printing module";
   };
 

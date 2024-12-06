@@ -11,7 +11,7 @@
       allowUnfree = true;
     };
   };
-  home =  {
+  home = {
     username = "coll";
     homeDirectory = "/home/coll";
 
@@ -35,7 +35,7 @@
       enable = true;
 
       defaultApplications = {
-      "text/plain" = ["nvim"];
+        "text/plain" = [ "nvim" ];
       };
     };
   };
@@ -75,7 +75,7 @@
     gnumake
     pkg-config
 
-   
+
 
     #Languages
     go

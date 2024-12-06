@@ -3,13 +3,13 @@
 {
   options = {
     networkModule = {
-      enable = 
-      lib.mkEnableOption "enables networking";
+      enable =
+        lib.mkEnableOption "enables networking";
 
       firewall = {
         enable =
           lib.mkEnableOption "enables firewall";
-        openDebugPorts = 
+        openDebugPorts =
           lib.mkEnableOption "opens ports 8080, 8081, 8088";
       };
     };
@@ -23,9 +23,9 @@
       firewall = {
         enable = config.networkModule.firewall.enable;
 
-        allowedTCPPorts = 
+        allowedTCPPorts =
           lib.mkIf config.networkModule.firewall.openDebugPorts [ 8080 8081 8088 ];
-        allowedUDPPorts = 
+        allowedUDPPorts =
           lib.mkIf config.networkModule.firewall.openDebugPorts [ 8080 8081 8088 ];
       };
     };

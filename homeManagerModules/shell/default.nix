@@ -6,7 +6,7 @@
     ./yazi/yaziModule.nix
     ./nvim/nvimModule.nix
   ];
-  
+
   nvimModule.enable = lib.mkDefault true;
 
   shellModule.enable = lib.mkDefault true;

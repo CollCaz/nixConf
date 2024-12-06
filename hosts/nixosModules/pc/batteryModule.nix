@@ -2,7 +2,7 @@
 
 {
   options = {
-    batteryModule.enable = 
+    batteryModule.enable =
       lib.mkEnableOption "enables battery management";
   };
 
