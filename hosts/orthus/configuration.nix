@@ -9,6 +9,7 @@
       ../nixosModules/networking/default.nix
       ../nixosModules/gaming/default.nix
       ../nixosModules/nvidia/default.nix
+      ../nixosModules/virtualization/default.nix
 
       ./devices.nix
     ];
