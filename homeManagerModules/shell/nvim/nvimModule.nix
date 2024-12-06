@@ -4,8 +4,8 @@ let
   config-repo = pkgs.fetchFromGitHub {
     owner = "CollCaz";
     repo = "Neovim-Config";
-    rev = "3cdba4254c652e262965093fd7792850a6d1f019";
-    hash = "sha256-kkADL4tMfhm1YUJR4eoiu33ZspvZ7Pb6aMVOWqGu4po=";
+    rev = "main";
+    hash = "sha256-odX2rNp5nq6NkxfeF8wbw3KGcEEzbXLaigMy3RSmfy4=";
   };
 in
 {
