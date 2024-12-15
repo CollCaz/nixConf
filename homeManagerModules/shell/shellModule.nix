@@ -99,6 +99,12 @@
       enable = true;
     };
     programs.btop = {
+      package = pkgs.btop.overrideAttrs (oldAttrs: {
+        nativeBuildInputs = (oldAttrs.nativeBuildInputs or []) ++ [pkgs.addOpenGLRunpath];
+        postFixup = ''
+          ${pkgs.addOpenGLRunpath}/bin/addOpenGLRunpath $out/bin/btop
+        '';
+      });
       enable = true;
       settings = {
         vim_keys = true;
