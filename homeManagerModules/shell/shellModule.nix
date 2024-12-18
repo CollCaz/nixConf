@@ -99,12 +99,7 @@
       enable = true;
     };
     programs.btop = {
-      package = pkgs.btop.overrideAttrs (oldAttrs: {
-        nativeBuildInputs = (oldAttrs.nativeBuildInputs or []) ++ [pkgs.addOpenGLRunpath];
-        postFixup = ''
-          ${pkgs.addOpenGLRunpath}/bin/addOpenGLRunpath $out/bin/btop
-        '';
-      });
+      package = pkgs.btop.override {cudaSupport = true;};
       enable = true;
       settings = {
         vim_keys = true;
