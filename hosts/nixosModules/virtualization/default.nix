@@ -6,7 +6,9 @@
 				lib.mkEnableOption "enable virtualisation module";
 			vbox = {
 				enable = lib.mkEnableOption "enable virtual box";
-				enableKvm = lib.mkEnableOption "enable kvm support";
+			};
+			docker = {
+				enable = lib.mkEnableOption "enable docker";
 			};
 		};
 	};
@@ -16,10 +18,19 @@
 		# 	dockerCompat = true;
 		# };
 		# environment.systemPackages = [ pkgs.distrobox ];
-		virtualisation.virtualbox = lib.mkIf config.virtualisationModule.enableVirtualBox {
+		virtualisation.docker = lib.mkIf config.virtualisationModule.docker.enable {
+			enable = true;
+			rootless = {
+				enable = true;
+				setSocketVariable = true;
+			};
+		};
+		users.extraGroups.vboxusers.members = [ "coll" ];
+		virtualisation.virtualbox = lib.mkIf config.virtualisationModule.vbox.enable {
 			host = {
 				enable = true;
-				enableKvm = true;
+				enableKvm = false;
+				addNetworkInterface = false;
 			};
 		};
 	};

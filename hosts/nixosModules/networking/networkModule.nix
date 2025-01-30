@@ -24,9 +24,9 @@
         enable = config.networkModule.firewall.enable;
 
         allowedTCPPorts =
-          lib.mkIf config.networkModule.firewall.openDebugPorts [ 8080 8081 8088 ];
+          lib.mkIf config.networkModule.firewall.openDebugPorts [ 8080 8081 8088 2222 22 ];
         allowedUDPPorts =
-          lib.mkIf config.networkModule.firewall.openDebugPorts [ 8080 8081 8088 ];
+          lib.mkIf config.networkModule.firewall.openDebugPorts [ 8080 8081 8088 2222 22];
       };
     };
   };

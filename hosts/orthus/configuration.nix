@@ -18,4 +18,8 @@
   time.timeZone = "Africa/Tripoli";
 
   nvidiaModule.enable = true;
+  virtualisationModule = {
+    enable = true;
+    vbox.enable = true;
+  };
 }

@@ -10,7 +10,6 @@
     fonts = {
       enableDefaultPackages = true;
       packages = with pkgs; [
-        nerdfonts
         fira-go
         fira
         roboto-slab
