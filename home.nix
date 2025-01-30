@@ -6,11 +6,6 @@
     enable = true;
   };
 
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
   home = {
     username = "coll";
     homeDirectory = "/home/coll";
