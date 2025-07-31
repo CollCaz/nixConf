@@ -90,6 +90,7 @@
     vscodium-fhs
     figma-linux
     ghostty
+    hello
 
    
 
