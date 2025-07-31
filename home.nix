@@ -6,9 +6,23 @@
     enable = true;
   };
 
-  home = {
+
+  home =  {
     username = "coll";
     homeDirectory = "/home/coll";
+
+    file = builtins.listToAttrs (
+      builtins.map (name: {
+        name = ".config/${name}";
+        value = {
+          enable = true;
+          source = ./config + "/${name}";
+          force = true;
+        };
+      }) (builtins.attrNames (builtins.readDir ./config))
+    );
+
+
 
     # You should not change this value, even if you update Home Manager. If you do
     # want to update the value, then make sure to first check the Home Manager
@@ -30,7 +44,7 @@
       enable = true;
 
       defaultApplications = {
-        "text/plain" = [ "nvim" ];
+      "text/plain" = ["nvim"];
       };
     };
   };
@@ -38,45 +52,53 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    protonvpn-gui
-    protonvpn-cli_2
-    pamixer
-    pavucontrol
-    vivid
-    firefox
     brave
-    telegram-desktop
-    waybar
-    kitty
-    wezterm
-    protonvpn-gui
-    gnome-keyring
-    obs-studio
-    protonvpn-cli_2
     croc
-    webcord-vencord
     fira
-    networkmanagerapplet
-    scc
-    sqlite
-    luarocks
+    firefox
     gnirehtet
-    smartmontools
-    telegram-desktop
-    qbittorrent
-    tofi
+    gnome-keyring
+    gnumake
     hyprpaper
     hyprshot
-    gnumake
+    kitty
+    luarocks
+    networkmanagerapplet
+    obs-studio
+    pamixer
+    pavucontrol
     pkg-config
+    protonvpn-cli_2
+    protonvpn-cli_2
+    protonvpn-gui
+    protonvpn-gui
+    qbittorrent
+    scc
+    smartmontools
+    sqlite
+    telegram-desktop
+    tofi
+    vivid
+    vlc
+    waybar
+    webcord-vencord
+    wezterm
+    whatsapp-for-linux
+    obsidian
+    vesktop
+    bun
+    vscodium-fhs
+    figma-linux
+    ghostty
 
-
+   
 
     #Languages
     go
     python3
     gcc
     lua
+    odin
 
     #LSP
     lua-language-server
@@ -96,21 +118,6 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   # xdg.configFile."waybar/config.jsonc".source = ../config.jsonc;
-  home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
-    ".config".recursive = true;
-    ".config".source = ./config;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
-  };
-
   services = {
     dunst = {
       enable = true;

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs,  ... }:
 
 {
   boot = {
@@ -13,14 +13,14 @@
   };
 
   users = {
-    groups = { };
-
+    groups = {};
+    
     users = {
       coll = {
         isNormalUser = true;
         description = "Yassen Tambakti";
         extraGroups = [ "networkmanager" "wheel" "video" ];
-        packages = [ ];
+        packages = [];
       };
     };
   };
@@ -57,12 +57,12 @@
     unrar
     unzip
     neovim
-    vim
+    vim 
     wget
     zip
   ];
 
-
+  
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

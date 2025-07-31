@@ -3,7 +3,7 @@
 {
   options = {
     yaziModule = {
-      enable =
+      enable = 
         lib.mkEnableOption "enables yazi";
 
       fishIntegration =
@@ -19,9 +19,9 @@
         enable = true;
 
         defaultApplications = {
-          "inode/directory" = [ "yazi.desktop" ];
-          "image/png" = [ "yazi.desktop" ];
-          "image/jpg" = [ "yazi.desktop" ];
+        "inode/directory" = ["yazi.desktop"];
+        "image/png" = ["yazi.desktop"];
+        "image/jpg" = ["yazi.desktop"];
         };
       };
     };
@@ -32,7 +32,6 @@
       ];
 
       file = {
-        ".config/yazi".recursive = true;
         ".config/yazi".source = ./yaziConfig;
       };
     };

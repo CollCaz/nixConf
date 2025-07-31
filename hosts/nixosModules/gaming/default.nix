@@ -1,9 +1,9 @@
 { lib, ... }:
 {
-  imports = [
-    ./steamModule.nix
-    ./bottles.nix
-  ];
+	imports = [
+		./steamModule.nix
+		./bottles.nix
+	];
 
-  steamModule.enable = lib.mkDefault true;
+	steamModule.enable = lib.mkDefault true;
 }

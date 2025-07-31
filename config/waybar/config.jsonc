@@ -89,7 +89,7 @@
   },
   "pulseaudio": {
     "format": "{icon}  {volume}",
-    "format-muted": "婢 ",
+    "format-muted": "󰝟 ",
     "on-click": "pavucontrol -t 3",
     "on-click-right": "pamixer --toggle-mute",
     "on-scroll-up": "pamixer -i 5",

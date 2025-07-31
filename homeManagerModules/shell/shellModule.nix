@@ -35,11 +35,11 @@
       enable = true;
       sessionVariables.EDITOR = "nvim";
       initExtra = lib.mkIf config.shellModule.loginShell ''
-        if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
-          then
-            shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
-            exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
-        fi
+         if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
+           then
+             shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+             exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+         fi
       '';
     };
 
@@ -62,7 +62,7 @@
         fish_greeting.body = '''';
         fish_user_key_bindings = {
           body = ''
-            bind -M insert \cy accept-autosuggestion
+          bind -M insert \cy accept-autosuggestion
           '';
         };
         mount = {
@@ -99,7 +99,6 @@
       enable = true;
     };
     programs.btop = {
-      package = pkgs.btop.override {cudaSupport = true;};
       enable = true;
       settings = {
         vim_keys = true;

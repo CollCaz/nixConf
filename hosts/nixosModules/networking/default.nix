@@ -9,5 +9,6 @@
       enable = lib.mkDefault true;
       openDebugPorts = lib.mkDefault true;
     };
+    bluetooth.enable = true;
   };
 }

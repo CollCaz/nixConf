@@ -2,7 +2,7 @@
 
 {
   options = {
-    fontsModule.enable =
+    fontsModule.enable = 
       lib.mkEnableOption "enables fonts module";
   };
 
@@ -13,13 +13,15 @@
         fira-go
         fira
         roboto-slab
+        nerd-fonts.fira-mono
+        nerd-fonts.fira-code
       ];
-
+      
       fontconfig = {
         defaultFonts = {
           serif = [ "roboto-slab" "nerdfonts" ];
           sansSerif = [ "fira-go" "fira" "nerdfonts" ];
-          monospace = [ "fira-code" "nerdfonts" ];
+          monospace = [ "fira-code" "nerdfonts"];
         };
       };
     };
