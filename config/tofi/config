@@ -11,3 +11,8 @@ outline-width = 0
 num-results = 8
 font = monospace
 font-size = 20
+# gruvbox-dark
+text-color       = #ebdbb2
+prompt-color     = #fb4934
+selection-color  = #fabd2f
+background-color = #282828
