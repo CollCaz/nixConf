@@ -4,13 +4,14 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     stylix.url = "github:danth/stylix";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, home-manager, ...}@inputs:
+  outputs = { nixpkgs, home-manager, spicetify-nix, stylix, ... }:
     let 
       system = "x86_64-linux";
 
@@ -26,13 +27,12 @@
       nixosConfigurations = {
         orthus = nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = { inherit inputs; };
           modules = [
             {
               nixpkgs.overlays = overlays;
             }
             ./hosts/orthus/configuration.nix
-            inputs.stylix.nixosModules.stylix
+            stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
@@ -43,17 +43,21 @@
         };
         beatrix = nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = { inherit inputs; };
           modules = [
             {
               nixpkgs.overlays = overlays;
             }
             ./hosts/beatrix/configuration.nix
-            inputs.stylix.nixosModules.stylix
+            stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.coll = import ./home.nix;
+              home-manager.users.coll = {
+                imports = [ 
+                  ./home.nix 
+                  spicetify-nix.homeManagerModules.spicetify
+                ];
+              };
               home-manager.backupFileExtension = "backup";
             }
           ];

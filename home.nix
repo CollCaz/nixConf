@@ -1,6 +1,5 @@
-{ pkgs, ... }:
-
-{
+{ pkgs, ... }: let
+in {
   # Let Home Manager install and manage itself.
   programs.home-manager = {
     enable = true;
@@ -34,6 +33,7 @@
   imports = [
     ./homeManagerModules/shell/default.nix
     ./homeManagerModules/git/gitModule.nix
+    ./homeManagerModules/programs/spotify.nix
   ];
 
   xdg = {
@@ -134,3 +134,4 @@
     #theme = "Gruvbox Dark Hard";
   };
 }
+
