@@ -11,7 +11,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, spicetify-nix, stylix, ... }:
+  outputs = { nixpkgs, home-manager, spicetify-nix, stylix, ... }@inputs:
     let 
       system = "x86_64-linux";
 
@@ -52,10 +52,13 @@
             home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = {
+                inherit inputs; 
+                inherit system;
+              };
               home-manager.users.coll = {
                 imports = [ 
                   ./home.nix 
-                  spicetify-nix.homeManagerModules.spicetify
                 ];
               };
               home-manager.backupFileExtension = "backup";

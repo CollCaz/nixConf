@@ -91,6 +91,7 @@ in {
     figma-linux
     ghostty
     hello
+    mpv
 
    
 
@@ -123,10 +124,6 @@ in {
     dunst = {
       enable = true;
     };
-  };
-
-  programs.mpv = {
-    enable = true;
   };
 
   programs.kitty = {
