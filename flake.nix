@@ -11,7 +11,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, spicetify-nix, stylix, ... }@inputs:
+  outputs = { nixpkgs, home-manager, stylix, ... }@inputs:
     let 
       system = "x86_64-linux";
 
