@@ -18,7 +18,8 @@
 
 	virtualisationModule = {
 		enable = true;
-		vbox.enable = true;
+		vbox.enable = false;
+		virtManager.enable = true;
 	};
 	networkModule = {
 		enable = true;
