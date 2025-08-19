@@ -92,6 +92,7 @@ in {
     ghostty
     hello
     mpv
+    tldr
 
    
 
