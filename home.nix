@@ -55,8 +55,6 @@ in {
     brave
     croc
     fira
-    firefox
-    gnirehtet
     gnome-keyring
     gnumake
     hyprpaper
@@ -67,28 +65,20 @@ in {
     obs-studio
     pamixer
     pavucontrol
-    pkg-config
-    protonvpn-cli_2
-    protonvpn-cli_2
-    protonvpn-gui
     protonvpn-gui
     qbittorrent
     scc
     smartmontools
-    sqlite
     telegram-desktop
     tofi
     vivid
     vlc
     waybar
-    webcord-vencord
     wezterm
     whatsapp-for-linux
     obsidian
     vesktop
     bun
-    vscodium-fhs
-    figma-linux
     ghostty
     hello
     mpv
