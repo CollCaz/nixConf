@@ -100,6 +100,7 @@
       enable = true;
     };
     programs.btop = {
+      package = pkgs.btop.override {cudaSupport = true;};
       enable = true;
       settings = {
         vim_keys = true;

@@ -34,6 +34,7 @@ in {
     ./homeManagerModules/shell/default.nix
     ./homeManagerModules/git/gitModule.nix
     ./homeManagerModules/programs/spotify.nix
+    ./homeManagerModules/programs/retroarch.nix
   ];
 
   xdg = {
@@ -67,7 +68,6 @@ in {
     pavucontrol
     protonvpn-gui
     qbittorrent
-    scc
     smartmontools
     telegram-desktop
     tofi
@@ -83,6 +83,10 @@ in {
     hello
     mpv
     tldr
+    discord
+    tmux
+    pcsx2
+    p7zip
 
    
 

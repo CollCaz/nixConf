@@ -1,11 +1,9 @@
 { pkgs, ... }:
 {
-  programs.retroarch= {
-    enable = true;
-    package = pkgs.retroarch.override {
-      cores = with pkgs.libreto; [
-        pcsx2
-      ];
-    };
-  };
+  home.packages = [
+    (pkgs.retroarch.withCores (cores: with cores; [
+      pcsx2
+      beetle-gba
+    ]))
+  ];
 }
