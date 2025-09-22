@@ -7,6 +7,7 @@
 
     shellModule.loginShell =
       lib.mkEnableOption "fish as the login shell";
+
   };
 
   config = lib.mkIf config.shellModule.enable {
