@@ -82,10 +82,9 @@ in {
     ghostty
     hello
     mpv
-    tldr
     discord
-    tmux
     pcsx2
+    rpcs3
     p7zip
 
    
