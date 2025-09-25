@@ -84,10 +84,21 @@
           title = "Harry Kenya";
           tags = [
             "cars"
+            "videos"
             "vlog"
             "diy"
           ];
           url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCfUdIRQRRYiCiuuQ6_9k-DA";
+        }
+        {
+          title = "Anton Petrov";
+          tags = [
+            "videos"
+            "youtube"
+            "educational"
+            "entertainment"
+          ];
+          url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCciQ8wFcVoIIMi-lfu8-cjQ";
         }
       ];
     };
