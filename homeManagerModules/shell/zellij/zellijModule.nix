@@ -8,7 +8,10 @@
     programs.zellij = {
       enable = true;
       enableFishIntegration = true;
-      theme = "gruvbox-dark";
+
+      settings = {
+        theme = "gruvbox-dark";
+      };
     };
   };
 }
