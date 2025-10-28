@@ -7,13 +7,12 @@
 
 	config = lib.mkIf config.pamModule.enable {
 		security.pam = {
-			enable = true;
 			loginLimits = [
 				{
-					domain = "CollCaz";
+					domain = "coll";
 					type = "-";
 					item = "memlock";
-					value = "unlimited";
+					value = "";
 				}
 			];
 		};
