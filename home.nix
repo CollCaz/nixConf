@@ -33,8 +33,7 @@ in {
   imports = [
     ./homeManagerModules/shell/default.nix
     ./homeManagerModules/git/gitModule.nix
-    ./homeManagerModules/programs/spotify.nix
-    ./homeManagerModules/programs/retroarch.nix
+    # ./homeManagerModules/programs/spotify.nix
   ];
 
   xdg = {
@@ -74,18 +73,14 @@ in {
     vivid
     vlc
     waybar
-    wezterm
-    whatsapp-for-linux
-    obsidian
     vesktop
     bun
-    ghostty
     hello
     mpv
-    discord
     pcsx2
     rpcs3
     p7zip
+    cinny-desktop
 
    
 
@@ -94,14 +89,10 @@ in {
     python3
     gcc
     lua
-    odin
 
     #LSP
     lua-language-server
-    gopls
     nixd
-    clang-tools_18
-    basedpyright
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your

@@ -100,6 +100,15 @@
           ];
           url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCciQ8wFcVoIIMi-lfu8-cjQ";
         }
+        {
+          title = "Cadence";
+          tags = [
+            "blog"
+            "personal"
+            "random"
+          ];
+          url = "https://cadence.moe/blog/atom.xml?limit=10";
+        }
       ];
     };
   };
