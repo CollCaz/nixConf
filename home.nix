@@ -80,7 +80,7 @@ in {
     pcsx2
     rpcs3
     p7zip
-    cinny-desktop
+    thunderbird
 
    
 
