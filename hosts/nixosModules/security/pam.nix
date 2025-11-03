@@ -12,7 +12,7 @@
 					domain = "coll";
 					type = "-";
 					item = "memlock";
-					value = "";
+					value = "-1";
 				}
 			];
 		};
