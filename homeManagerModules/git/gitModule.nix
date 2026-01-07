@@ -2,8 +2,10 @@
 {
   programs.git = {
     enable = true;
-    userName = "CollCaz";
-    userEmail = "62307305+CollCaz@users.noreply.github.com";
+    user = {
+      name = "CollCaz";
+      email = "62307305+CollCaz@users.noreply.github.com";
+    };
     aliases = {
       pu = "push";
       co = "checkout";
