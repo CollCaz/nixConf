@@ -32,7 +32,7 @@ in {
 
   imports = [
     ./homeManagerModules/shell/default.nix
-    ./homeManagerModules/git/gitModule.nix
+    # ./homeManagerModules/git/gitModule.nix
     # ./homeManagerModules/programs/spotify.nix
   ];
 

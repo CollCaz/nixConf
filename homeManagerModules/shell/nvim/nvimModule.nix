@@ -1,12 +1,12 @@
 { pkgs, lib, config, ... }:
 
 let
-  config-repo = pkgs.fetchFromGitHub {
-    owner = "CollCaz";
-    repo = "Neovim-Config";
-    rev = "main";
-    hash = "sha256-odX2rNp5nq6NkxfeF8wbw3KGcEEzbXLaigMy3RSmfy4=";
-  };
+  #config-repo = pkgs.fetchFromGitHub {
+  #  owner = "CollCaz";
+  #  repo = "Neovim-Config";
+  #  rev = "main";
+  #  hash = "sha256-odX2rNp5nq6NkxfeF8wbw3KGcEEzbXLaigMy3RSmfy4=";
+  #};
 in
 {
   options = {
@@ -22,7 +22,7 @@ in
 
       file = {
         ".config/nvim".recursive = true;
-        ".config/nvim".source = config-repo;
+        ".config/nvim".source = ./nvimConfig;
       };
       sessionVariables = {
         EDITOR = "nvim";
