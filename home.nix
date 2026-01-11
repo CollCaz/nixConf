@@ -32,7 +32,7 @@ in {
 
   imports = [
     ./homeManagerModules/shell/default.nix
-    # ./homeManagerModules/git/gitModule.nix
+    ./homeManagerModules/git/gitModule.nix
     # ./homeManagerModules/programs/spotify.nix
   ];
 
@@ -81,6 +81,8 @@ in {
     rpcs3
     p7zip
     thunderbird
+    gparted
+    bitwarden-desktop
 
    
 
