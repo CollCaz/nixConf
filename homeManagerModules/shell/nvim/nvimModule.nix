@@ -17,6 +17,7 @@ in
   config = lib.mkIf config.nvimModule.enable {
     home = {
       packages = with pkgs; [
+        tree-sitter
         neovim
       ];
 
