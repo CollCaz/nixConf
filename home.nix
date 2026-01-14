@@ -83,6 +83,11 @@ in {
     thunderbird
     gparted
     bitwarden-desktop
+    tree-sitter
+    wine64
+    wine-wayland
+    flatpak
+    hyprsunset
 
    
 
