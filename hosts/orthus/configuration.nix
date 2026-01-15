@@ -10,6 +10,7 @@
 			../nixosModules/gaming/default.nix
 			../nixosModules/nvidia/default.nix
 			../nixosModules/security/default.nix
+			../nixosModules/database/default.nix
 
 			./devices.nix
 		];
