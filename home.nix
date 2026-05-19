@@ -65,7 +65,7 @@ in {
     obs-studio
     pamixer
     pavucontrol
-    protonvpn-gui
+    proton-vpn
     qbittorrent
     scc
     smartmontools
@@ -75,7 +75,7 @@ in {
     vlc
     waybar
     wezterm
-    whatsapp-for-linux
+    karere
     obsidian
     vesktop
     bun
@@ -97,7 +97,7 @@ in {
     lua-language-server
     gopls
     nixd
-    clang-tools_18
+    llvmPackages_latest.clang-tools
     basedpyright
 
     # # You can also create simple shell scripts directly inside your
