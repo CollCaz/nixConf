@@ -11,7 +11,7 @@ in {
     homeDirectory = "/home/coll";
 
     file = builtins.listToAttrs (
-      builtins.map (name: {
+      map (name: {
         name = ".config/${name}";
         value = {
           enable = true;
@@ -33,6 +33,7 @@ in {
   imports = [
     ./homeManagerModules/shell/default.nix
     ./homeManagerModules/git/gitModule.nix
+    ./homeManagerModules/programs/hldedger.nix
     # ./homeManagerModules/programs/spotify.nix
   ];
 
@@ -65,7 +66,7 @@ in {
     obs-studio
     pamixer
     pavucontrol
-    protonvpn-gui
+    proton-vpn
     qbittorrent
     smartmontools
     telegram-desktop
@@ -74,6 +75,7 @@ in {
     vlc
     waybar
     vesktop
+    discord
     bun
     hello
     mpv
@@ -85,9 +87,17 @@ in {
     bitwarden-desktop
     tree-sitter
     wine64
+    jq
     wine-wayland
     flatpak
     hyprsunset
+    protonup-qt
+    lutris
+    kiwix
+    calibre
+    anki
+    tetrio-desktop
+    openapi-tui
 
    
 
