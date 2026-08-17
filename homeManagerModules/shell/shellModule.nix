@@ -36,7 +36,10 @@
 
     programs.bash = {
       enable = true;
-      sessionVariables.EDITOR = "nvim";
+      sessionVariables = {
+        EDITOR = "nvim";
+        LEDGER_FILE="~/Finance/main.journal";
+      };
       initExtra = lib.mkIf config.shellModule.loginShell ''
          if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
            then
@@ -68,11 +71,6 @@
         fish_user_key_bindings = {
           body = ''
           bind -M insert \cy accept-autosuggestion
-          '';
-        };
-        mount = {
-          body = ''
-            sudo mount $1 $2
           '';
         };
       };

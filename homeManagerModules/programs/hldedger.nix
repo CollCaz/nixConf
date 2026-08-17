@@ -5,7 +5,7 @@
       hledger
       hledger-ui
     ];
-    sessionVariabels = {
+    sessionVariables = {
       LEDGER_FILE = "~/Finance/main.journal";
     };
   };
