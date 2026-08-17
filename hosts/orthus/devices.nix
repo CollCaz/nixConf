@@ -10,4 +10,11 @@
 			options = [ "rw" "uid=1000" ];
 		};
 	};
+	fileSystems = {
+		"/mnt/Drive2" = {
+			device = "/dev/disk/by-uuid/59B03B5B610C6245";
+			fsType = "ntfs-3g";
+			options = [ "rw" "uid=1000" ];
+		};
+	};
 }
