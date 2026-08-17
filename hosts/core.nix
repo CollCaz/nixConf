@@ -47,6 +47,10 @@
     defaultLocale = "en_GB.UTF-8";
   };
 
+  services.mysql = {
+    enable = true;
+    package = pkgs.mariadb;
+  };
 
   environment.systemPackages = with pkgs; [
     fd
