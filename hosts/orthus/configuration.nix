@@ -20,5 +20,7 @@
 
 	pamModule.enable = true;
 
+	cosmicModule.enable = false;
+
 	nvidiaModule.enable = true;
 }

@@ -10,6 +10,7 @@
     ./soundModule.nix
     ./stylix.nix
     ./misc.nix
+    ./cosmicModule.nix
   ];
 
   fontsModule.enable =
