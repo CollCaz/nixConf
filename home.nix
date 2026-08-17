@@ -11,7 +11,7 @@ in {
     homeDirectory = "/home/coll";
 
     file = builtins.listToAttrs (
-      builtins.map (name: {
+      map (name: {
         name = ".config/${name}";
         value = {
           enable = true;
@@ -83,6 +83,8 @@ in {
     hello
     mpv
     tldr
+    rofi
+    flameshot
 
    
 
