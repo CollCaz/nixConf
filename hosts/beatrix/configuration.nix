@@ -8,6 +8,7 @@
 			../nixosModules/pc/default.nix
 			../nixosModules/networking/default.nix
 			../nixosModules/virtualization/default.nix
+			../nixosModules/database/default.nix
 		];
 
 	networking.hostName = "beatrix";
@@ -22,6 +23,7 @@
 			enable = true;
 		};
 	};
+
 	networkModule = {
 		enable = true;
 
