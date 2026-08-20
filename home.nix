@@ -84,7 +84,7 @@ in {
     p7zip
     thunderbird
     gparted
-    bitwarden-desktop
+    # bitwarden-desktop
     tree-sitter
     wine64
     jq
