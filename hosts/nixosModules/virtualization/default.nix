@@ -13,6 +13,9 @@
 			podman = {
 				enable = lib.mkEnableOption "enable podman";
 			};
+			docker = {
+				enable = lib.mkEnableOption "enable docker";
+			};
 		};
 	};
 	config = lib.mkIf config.virtualisationModule.enable {
@@ -30,6 +33,10 @@
 				enable = true;
 				dockerCompat = true;
 				defaultNetwork.settings = { dns_enabled = true; };
+			};
+
+			docker = lib.mkIf config.virtualisationModule.docker.enable {
+				enable = true;
 			};
 
 			libvirtd = lib.mkIf config.virtualisationModule.virtManager.enable {
