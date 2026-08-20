@@ -18,8 +18,9 @@
 
 	virtualisationModule = {
 		enable = true;
-		vbox.enable = false;
-		virtManager.enable = true;
+		docker = {
+			enable = true;
+		};
 	};
 	networkModule = {
 		enable = true;
