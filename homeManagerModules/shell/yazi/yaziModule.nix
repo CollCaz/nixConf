@@ -15,6 +15,31 @@
       enable = true;
       mime.enable = true;
 
+      desktopEntries = {
+        yazi = {
+          categories = [
+            "System"
+            "FileManager"
+            "FileTools"
+            "ConsoleOnly"
+          ];
+          exec = "kitty -T yazi --exec yazi";
+          genericName = "file explorer";
+          mimeType = [
+            "inode/directory"
+          ];
+          name = "Yazi";
+          terminal = false;
+          # keywords = [
+          #   "File"
+          #   "Manager"
+          #   "Explorer"
+          #   "Launcher"
+          #   "Browser"
+          # ];
+        };
+      };
+
       mimeApps = {
         enable = true;
 
