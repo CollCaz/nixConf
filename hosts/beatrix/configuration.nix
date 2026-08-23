@@ -18,6 +18,7 @@
 	powerManagementModule.enable = true;
 
 	virtualisationModule = {
+		user = "coll";
 		enable = true;
 		docker = {
 			enable = true;
