@@ -11,6 +11,7 @@
 			../nixosModules/nvidia/default.nix
 			../nixosModules/security/default.nix
 			../nixosModules/database/default.nix
+			../nixosModules/virtualization/default.nix
 
 			./devices.nix
 		];
