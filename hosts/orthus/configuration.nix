@@ -15,6 +15,14 @@
 			./devices.nix
 		];
 
+	virtualisationModule = {
+		user = "coll";
+		enable = true;
+		docker = {
+			enable = true;
+		};
+	};
+
 	networking.hostName = "orthus";
 	time.timeZone = "Africa/Tripoli";
 
