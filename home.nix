@@ -80,7 +80,7 @@ in {
     hello
     mpv
     pcsx2
-    rpcs3
+    # rpcs3
     p7zip
     thunderbird
     gparted
