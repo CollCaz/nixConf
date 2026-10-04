@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     stylix.url = "github:danth/stylix";
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    # spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
